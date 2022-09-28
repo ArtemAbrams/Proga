@@ -1,0 +1,21 @@
+﻿using Task_3;
+Console.WriteLine("Enter sum of hryvnia");
+double hryvnia = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Enter the Dollar Rate");
+Decimal dollarRate = Decimal.Parse(Console.ReadLine());
+Console.WriteLine("Enter the euro Rate");
+Decimal euroRate = Decimal.Parse(Console.ReadLine());
+Console.WriteLine("Write the sum of dollars");
+double dollar = Double.Parse(Console.ReadLine());
+Console.WriteLine("Write the sum of euros");
+Double euro = Double.Parse(Console.ReadLine());
+Converter converter = new Converter(dollarRate, euroRate);
+string result = string.Format("{0:f2}" , converter.convertHryvniaToDollar(hryvnia));
+Console.WriteLine("Hryvnia to Dollar " + result);
+result = string.Format("{0:f2}", converter.convertHryvniaToEuro(hryvnia));
+Console.WriteLine("Hryvnia to Dollar " + result);
+result = string.Format("{0:f2}", converter.convertDollarToHryvnia(dollar));
+Console.WriteLine("Dollar to Hryvnia" + result);
+result = string.Format("{0:f2}", converter.convertEuroToHryvnia(euro));
+Console.WriteLine("Euro to Hryvnia" + result);
+
